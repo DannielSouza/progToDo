@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
 
 
-
-.container{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .list{
   cursor: pointer;
   user-select: none;
@@ -36,8 +28,9 @@
 
 @media (max-width: 450px){
   .list{
-    width: 23rem;
-    font-size: .9rem;
+    padding-right: 35px;
+    width: 23.5rem;
+    font-size: .8rem;
   }
 }
 
@@ -82,4 +75,52 @@ img{
 
 .trash:hover{
   opacity: 1;
+}
+
+
+li{
+  animation: listItemAnimation .4s forwards;
+}
+
+@keyframes listItemAnimation {
+  from{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to{
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+/* Footer */
+
+.footerContainer{
+  position: fixed;
+  bottom: 0;
+  height: 1.3rem;
+  width: 100vw;
+  background: #1f1f1f;
+  margin-top: 1rem;
+}
+
+.buttonPosition{
+  background: none;
+  border: none;
+  margin-right:.5rem;
+  padding: 0 .5rem;
+  font-weight: bold;
+  cursor: pointer;
+  height: 100%;
+}
+
+.credits{
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+
+.credits a{
+  color: white;
 }

@@ -5,7 +5,7 @@ import style from '../Styles/Tasks.module.css'
 let thisItem = null
 let taskChecada
 
-const Tasks = ({tasks, setTasks}) => {
+const Tasks = ({tasks, setTasks, position}) => {
   const liItem = React.useRef()
 
 
@@ -79,9 +79,12 @@ const Tasks = ({tasks, setTasks}) => {
           return
       }
     })
+
+    
+
   }
   if(tasks) return (
-    <ul className={style.container} id='list'>
+    <ul className={position} id='list'>
 
       {tasks && tasks.map(({id, text, checked})=>{
         if(checked === 'true'){
@@ -93,13 +96,13 @@ const Tasks = ({tasks, setTasks}) => {
           <img className={style.trash} src={trash} id={id} onClick={delTask} alt='deletar tarefa'/> 
         </li>
           )
-} return(
-  <li checado='false' ref={liItem} id={id} onClick={handleClick} className={style.list} key={id}>
-  <img className={style.check} src={check} alt='marcado como feito'/> 
-  <span onClick={handleClickFromSpan}>{text}</span>
-  <img className={style.trash} src={trash} id={id} onClick={delTask} alt='deletar tarefa'/> 
-</li>
-  )
+        } return(
+          <li checado='false' ref={liItem} id={id} onClick={handleClick} className={style.list} key={id}>
+          <img className={style.check} src={check} alt='marcado como feito'/> 
+          <span onClick={handleClickFromSpan}>{text}</span>
+          <img className={style.trash} src={trash} id={id} onClick={delTask} alt='deletar tarefa'/> 
+        </li>
+          )
       })}
     </ul>
   )

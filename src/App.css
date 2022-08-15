@@ -1,3 +1,5 @@
+/* RESETS */
+
 body{
   overflow-x: hidden;
 }
@@ -9,6 +11,8 @@ body{
   box-sizing: border-box;
   font-family: 'IBM Plex Mono', monospace;
 }
+
+/* SCROLL */
 
 body::-webkit-scrollbar {
   width: 18px; 
@@ -22,3 +26,26 @@ body::-webkit-scrollbar-thumb {
   background-color: #1f1f1f;   
   
 }
+
+/* POSITION */
+
+.grid,
+.flex{
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 1050px;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+

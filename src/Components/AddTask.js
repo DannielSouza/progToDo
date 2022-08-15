@@ -7,9 +7,8 @@ const AddTask = ({tasks, setTasks}) => {
   let storage
 
   React.useEffect(()=>{
-    
     storage = window.localStorage.getItem('tasks')
-  if(storage){
+  if(storage !== null){
     setTasks(JSON.parse(storage))  
   }
   },[])
@@ -41,7 +40,7 @@ const AddTask = ({tasks, setTasks}) => {
     }
 
     const tasksLS = { "id":`${gerarID()}`, "text":`${valor}`, "checked": `${false}`}
-    setTasks(tasks? [...tasks, { "id":`${gerarID()}`, "text":`${valor}`, "checked": `${false}`}] : [{...tasksLS}])
+    setTasks(tasks? [{ "id":`${gerarID()}`, "text":`${valor}`, "checked": `${false}`}, ...tasks ]: [{...tasksLS}])
     event.target[0].value = ''
   
   }

@@ -30,7 +30,8 @@
   .list{
     padding-right: 35px;
     width: 23rem;
-    font-size: .8rem;
+    height: 45px;
+    font-size: .75rem;
   }
 }
 

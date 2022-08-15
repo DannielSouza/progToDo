@@ -25,6 +25,18 @@ function App() {
     window.localStorage.setItem("position", position)
   },[position])
 
+  window.addEventListener('resize', resizeApp)
+
+  function resizeApp(){
+    var largura = window.innerWidth
+
+    if(largura < 1200){
+      setPosition('flex')
+    }
+    
+
+  }
+
   return (
     <>
      <AddTask tasks={tasks} setTasks={setTasks} />

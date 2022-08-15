@@ -29,7 +29,7 @@
 @media (max-width: 450px){
   .list{
     padding-right: 35px;
-    width: 23.5rem;
+    width: 23rem;
     font-size: .8rem;
   }
 }
@@ -94,6 +94,12 @@ li{
 }
 
 /* Footer */
+
+@media (max-width: 1200px){
+  .footerContainer{
+    display: none;
+  }
+}
 
 .footerContainer{
   position: fixed;

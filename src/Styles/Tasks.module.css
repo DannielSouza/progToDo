@@ -28,6 +28,19 @@
   transition: .3s;
 }
 
+@media (max-width: 750px){
+  .list{
+    width: 25rem;
+  }
+}
+
+@media (max-width: 450px){
+  .list{
+    width: 23rem;
+    font-size: .9rem;
+  }
+}
+
 .list[checado="false"]{
   transition: .3s;
 }
